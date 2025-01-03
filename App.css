@@ -1,0 +1,83 @@
+/* 기본 스타일 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1F1F1F;
+  display: flex; /* Flexbox 사용 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: flex-start; /* 수직 상단 정렬 */
+  min-height: 100vh; /* 전체 화면 높이를 차지 */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 수평 가운데 정렬 */
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1200px; /* 최대 너비 설정 */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #1F1F1F;
+  color: white;
+  text-align: left;
+  padding: 20px;
+  height: 80px; /* 헤더의 높이를 고정 */
+  display: flex;
+  justify-content: flex-start; /* 수평 왼쪽 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  box-sizing: border-box; /* padding 포함 너비 계산 */
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  padding: 20px;
+  margin-top: 80px; /* 헤더의 높이를 고려한 여백 */
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* 반응형 디자인: 모바일, 태블릿 등 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .post {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .post-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header, footer {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .post {
+    padding: 15px;
+    width: 100%;
+  }
+}
