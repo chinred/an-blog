@@ -1,12 +1,11 @@
 import React from 'react';
 import Post from './Post';
-import './PostList.css';
 
 const PostList = ({ posts }) => {
   return (
-    <div className="post-list">
+    <div>
       {posts.map((post) => (
-        <Post key={post.id} title={post.title} content={post.content} />
+        <Post key={post.id} title={post.title} imageUrl={post.imageUrl} />
       ))}
     </div>
   );
