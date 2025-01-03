@@ -1,32 +1,40 @@
 /* Post 영역 */
 .post {
   background: #1a1919;
-  margin: 30px 0; /* Post 간 간격을 더 넓게 */
-  padding: 40px; /* padding을 적당히 설정 */
-  border-radius: 15px; /* 모서리를 더 둥글게 */
+  margin: 20px 0; /* Post 간 간격 줄이기 */
+
+  border-radius: 15px; /* 모서리 둥글게 */
   text-align: left; /* 제목과 텍스트 왼쪽 정렬 */
   width: 100%; /* 전체 너비 */
-  max-width: 1200px;  /* 최대 너비를 더 넓게 설정 */
-  box-sizing: border-box; /* padding과 border 포함하여 너비 계산 */
+  max-width: 700px; /* 최대 너비 줄이기 */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 왼쪽 정렬 */
+  align-items: flex-start;
 }
 
 /* 이미지 스타일링 */
 .post img {
   width: 100%; /* 이미지 너비를 100%로 설정하여 공간에 맞게 확장 */
-  height: 100px; /* 이미지 높이를 박스 크기와 맞게 설정 */
+  height: 350px; /* 이미지 높이 */
   object-fit: cover; /* 이미지를 비율에 맞게 자르기 */
-  border-radius: 10px; /* 이미지 모서리를 둥글게 */
-  margin-bottom: 20px; /* 이미지와 제목 간의 여백 추가 */
+  border-radius: 10px 10px 0 0; /* 위쪽 모서리만 둥글게 설정 */ 
+  margin-bottom: 20px; /* 이미지와 제목 간 여백 */
 }
 
 /* 제목 스타일링 */
 .post h2 {
-  margin: 0;
-  font-size: 1.8rem;  /* 제목 폰트 크기 줄이기 */
-  color: white;
+  padding-left: 24px;
+  margin-bottom: 20px;
+  font-size: 1.2rem; /* 제목 폰트 크기 */
+  color: rgb(231, 222, 222);
   font-weight: bold; /* 제목을 굵게 설정 */
-  margin-bottom: 15px; /* 제목과 본문 간 간격 추가 */
+  margin-top: 10px; /* 제목과 이미지 간격 */
+  text-align: left; /* 왼쪽 정렬 유지 */
+}
+
+@media (max-width: 768px) {
+  .post img {
+    height: 200px;
+  }
 }
