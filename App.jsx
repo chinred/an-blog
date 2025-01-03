@@ -5,9 +5,21 @@ import PostList from './components/PostList';
 
 const App = () => {
   const posts = [
-    { id: 1, title: 'Welcome to My Blog', imageUrl: 'https://via.placeholder.com/600x300' },
-    { id: 2, title: 'React is Awesome', imageUrl: 'https://via.placeholder.com/600x300' },
-    { id: 3, title: 'Why I Love Coding', imageUrl: 'https://via.placeholder.com/600x300' },
+    {
+      id: 1,
+      title: 'Welcome to My Blog',
+      imageUrl: 'https://via.placeholder.com/1200x400?text=Welcome+to+My+Blog',
+    },
+    {
+      id: 2,
+      title: 'React is Awesome',
+      imageUrl: 'https://via.placeholder.com/1200x400?text=React+is+Awesome',
+    },
+    {
+      id: 3,
+      title: 'Why I Love Coding',
+      imageUrl: 'https://via.placeholder.com/1200x400?text=Why+I+Love+Coding',
+    },
   ];
 
   return (
